@@ -1,0 +1,22 @@
+Based on tenderlove's #which http://tenderlovemaking.com/2011/12/05/profiling-rails-startup-with-dtrace/
+
+Base Use:
+> require 'rwhich/file'
+> File.which 'ls'
+=> "/bin/ls"
+> File.which 'hahahahahah' #assuming you don't have a hahahahahah executable in ENV['PATH']
+=> nil
+
+Other Use:
+> require 'rwhich'
+> Class Foo
+    extend RWhich
+  end
+> Foo.which 'ls'
+=> "/bin/ls"
+> Class Bar
+    include RWhich
+  end
+> bar = Bar.new
+> bar.which 'ls'
+=> "/bin/ls"
