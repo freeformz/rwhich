@@ -30,21 +30,8 @@ Gem::Specification.new do |s|
   s.rubygems_version = "1.8.10"
   s.summary = "Ruby Which"
 
-  if s.respond_to? :specification_version then
-    s.specification_version = 3
-
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_development_dependency(%q<minitest>, [">= 0"])
-      s.add_development_dependency(%q<bundler>, ["~> 1.1.rc"])
-      s.add_development_dependency(%q<rake>, [">= 0"])
-    else
-      s.add_dependency(%q<minitest>, [">= 0"])
-      s.add_dependency(%q<bundler>, ["~> 1.1.rc"])
-      s.add_dependency(%q<rake>, [">= 0"])
-    end
-  else
-    s.add_dependency(%q<minitest>, [">= 0"])
-    s.add_dependency(%q<bundler>, ["~> 1.1.rc"])
-    s.add_dependency(%q<rake>, [">= 0"])
-  end
+  s.specification_version = 3
+  s.add_development_dependency 'minitest', '~> 5.7'
+  s.add_development_dependency 'bundler', '~> 1.7'
+  s.add_development_dependency 'rake', '~> 10'
 end
